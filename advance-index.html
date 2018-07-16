@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>position</title>
+	<script type="text/javascript"></script>
+	<style type="text/css">
+	*{margin: 0；margin：0；}
+	a{text-decoration: none;}
+	
+
+	/*页面容器*/
+	.all{width:1920px;margin: 0 auto; }
+      
+     
+
+
+      /*主页面*/
+     .page{width: 1920px;height:1080px ;background: url("../images/peak.jpg") center top no-repeat;background-color: 
+#20B2AA;float: left;position: relative;}
+	    
+	    
+
+
+
+
+
+	    /*导航*/
+	   .nav{width: 160px; height:205px; position:fixed; left:0; top: 50%; margin-top:-102px; background-color: ;font-family: }
+            
+            /*一级标题*/
+	       .nav-li{width: 160px;height: auto;border-bottom: 1px solid white;background-color:rgba(100 ,100 ,100 ,0.4);text-align: center;line-height:40px;font-size:16px;color: #FFF;  }
+	            .nav-li:hover{font-size: 20px;cursor: pointer;}
+
+                 /*二级标题*/
+	            .li-1{width:160px ;height: 40px;background-color:rgba(3,168,158,0.4);color:white;border-bottom: 1px solid yellow;display: none;font-size:;position: relative;}
+	                     .li-1:hover{background-color:rgba(20,30,240,0.4);}
+                           .nav-li:hover .li-1{display: block;}
+                         
+                         /*三级标题*/
+                           .li-2{width: 160px;height: auto;position: absolute;left: 160px;top: 0px;display: none;}
+                                .li-1:hover .li-2{display: block;cursor: pointer;}
+                                
+                               .li-2-son{width: 160px;height: 40px;background-color:  rgba(20,30,240,0.3);border-bottom: 1px solid white;text-align: center;line-height: 40px;border-radius: 14px 15px 15px 14px;}
+                               .li-2-son:hover{font-weight: bold;font-size: 20px;background-color: rgba(138,43,226,0.3);cursor: pointer;}
+
+       
+
+
+
+
+ /*返回顶部区*/      
+
+       .gotop{width: 30px;height: auto;background-color: gray;position: fixed;bottom: 40px;right: 0px;color: white;font-size: 25px;border: 3px solid dodgerblue;}
+        .gotop:hover{background-color: purple;color:;cursor: pointer;}
+          .gotop a{text-decoration: none;color:  white;}
+
+
+
+          
+
+
+
+  /*主页导航区*/
+          .one{width: 1216px;height: auto;background-color: gray;margin: auto;margin-top: 50px;font-size: 20px;}
+
+          .one-1{width: 300px;height: auto;background-color: rgba(20,30,240,0.4);border-right:; float: left;text-align: center;line-height:60px;margin-left: 4px;color: white;}
+          .one-1:hover{background-color:;font-size: 30px;background-color: rgba(20,30,240,0.5);cursor:pointer;}
+          .one-1:hover .one-1-son{display: block;}
+
+          	      .one-1-son{width: 300px; height:50px; background-color:rgba(10,200,30,0.2); border-bottom: 1px solid white; display: none;font-size: 20px;}
+          	      .one-1-son:hover {font-size: 25px;cursor:pointer;}
+          	       /* .one-1-sons{width: 300px;height:50px;background-color:black;border-bottom: 1px solid white;} */
+
+         
+         
+         
+
+
+
+
+         /*使用绝对定位来固定个人展示区，精华的地方是学会使用宽的百分比50%和加上margin加上它本身宽的一半来水平居中定位*/
+        .me{width: 400px;height: 500px;background-color:rgba(0,0,240,0.4);position: absolute;left: 50%;top: 400px;margin-left: -200px;border-radius: 10px;}
+        .me :hover{}
+          
+
+          .me .icon{width: 200px;height: 200px;background-color: gray;margin: 20px auto;background-image: url("./images/haha.gif");background-size:200px 200px;background-repeat: no-repeat;border-radius: 100px;}
+
+	      .me .words{width: 390px;height: 250px;background-color: ;margin: 0 auto;font-size: 20px;text-align: center;color: white;}  
+	      .me .words p{font-size: 35px;}        
+        
+
+          
+          
+
+          /*时钟区*/
+          .clock-zone{width: 400px;height:80px;background-color: ;position: absolute;top: 360px;right: 50px;} 
+           
+           .clock-zone h1{margin-left: 20px;width: 100px;height:100px;background-color:blue;text-align: center;line-height: 100px;font-size: 70px;color: white;font-weight: ;float: left;border-radius: 50px;border: ;}
+
+          
+           .clock-zone .minute{background-color: purple;}
+            .clock-zone .second{background-color: red;}
+
+
+
+
+
+
+
+        
+          /*登录与注册功能区，学会使用inherit来让子元素继承父元素的属性，就可以减少不必要的代码量*/
+          .login-zone{width: 240px;height: 80px;background-color:rgba(25,25,115,0.3);position: absolute;right: 50px ;top: 20;border-radius: 40px 40px 40px 40px;}
+            
+            .login{width:80px;height: 55px;background-color: purple;float: left;margin:0 26px 0;margin-top: 12px;}
+            
+            .sign-up{width:80px;height: 55px;background-color: purple;margin-:px;float: left;margin-top: 12px;}
+            
+            .login-zone button{width: inherit;height: inherit;font-size:16px;}
+             .login-zone button:hover{border: 2px solid black; }
+
+
+          
+
+
+
+
+
+          /*底部*/
+          .footer{width: 1920px ;height:300px;background-color:rgba(25,25,112,0.9);float: left;font-size: 25px;color: white;text-align: center;position:;}
+
+
+           /*年月日显示，主要是复习一下box-shadow和position的使用*/
+        .date-zone{width: 640px;height: 100px; background-color:; ;
+        position: ;color: white;margin:50px auto; }
+        
+        .year{width:200px; height: 90px; background-color:rgba(100,0,0,0.3) ;font-size: 70px;text-align:center;
+        	  line-height: 90px; margin: 5px 10px 5px 10px; float: left;border-radius: 5px}
+        
+        .month{width:200px;height: 90px;background-color:rgba(0,170,0,0.3);font-size: 70px;line-height: 90px;
+        	text-align: center; margin:5px 10px 5px 0px;float:left;border-radius: 5px}
+        
+        .day{width:200px;height: 90px;background-color:rgba(0,0,100,0.3);margin:0; line-height: 90px;text-align: center;
+        	 font-size: 60px; margin: 0 auto;margin-top: 5px;float: left;}
+
+
+
+          
+
+           
+           
+
+
+        
+	</style>     
+
+
+	
+
+	<script type="text/javascript">
+	
+
+	function clock()
+		 {
+					
+       
+		  var d=new Date();
+
+		  var h=d.getHours();
+	      var m=d.getMinutes();
+	      var s=d.getSeconds();
+	      //var ms=d.getMilliseconds();
+
+
+	     
+
+	     if (h<10)
+	     {h="0"+h} 
+
+	     if (m<10)
+	     {m="0"+m}
+
+	     if (s<10)
+	     {s="0"+s}
+
+        
+	    document.getElementById('hour').innerHTML=h;  //+":"+s+":"+ms
+		document.getElementById('minute').innerHTML=m;
+		document.getElementById('second').innerHTML=s;
+	}
+	
+    setInterval('clock()',1)
+
+
+
+
+
+
+    function getcurrentDate() 
+	{
+		  var d=new Date();
+		  var year=d.getFullYear();
+		  var month=d.getMonth()+1;
+		  var day=d.getDay();
+		  
+
+
+	     /*
+
+	      if (month<10) 
+	      	{year="0"+month}
+	     
+
+	      if (day<10) 
+	      	{year="0"+day}
+	     */
+	     
+
+         document.getElementById('year').innerHTML=year; 
+         document.getElementById('month').innerHTML=month; 
+         document.getElementById('day').innerHTML=day; 
+          	}
+         
+			
+	
+		
+	</script>          
+
+
+</head>
+
+
+
+<body onload="clock();getcurrentDate() ">
+	
+	<a href="" name="me"></a>
+
+<div class="all">
+	
+<div class="page">
+
+	<div class="nav">
+		
+		<div class="nav-li" >
+			  Linux
+			 
+			 <div class="li-1">level-2
+			 <div class="li-2">
+			 <div class="li-2-son">level-3</div>
+			  <div class="li-2-son">level-3</div>			
+			   <div class="li-2-son">level-3</div>	
+			    <div class="li-2-son">level-3</div>	
+			
+			 </div>
+			 </div>	
+		     
+		     <div class="li-1">level-2
+		     	 <div class="li-2">
+			 <div class="li-2-son">level-3</div>
+			  <div class="li-2-son">level-3</div>			
+			   <div class="li-2-son">level-3</div>	
+			    <div class="li-2-son">level-3</div>	
+			
+			 </div>
+		     	
+			
+			 </div>
+		    
+		     
+		     <div class="li-1">level-2	 
+		     	 <div class="li-2">
+			 <div class="li-2-son">level-3</div>
+			  <div class="li-2-son">level-3</div>			
+			   <div class="li-2-son">level-3</div>	
+			    <div class="li-2-son">level-3</div>	
+			
+			 </div>
+	
+			
+			 </div>
+		     
+		     <div class="li-1">level-2
+		     	 <div class="li-2">
+			 <div class="li-2-son">level-3</div>
+			  <div class="li-2-son">level-3</div>			
+			   <div class="li-2-son">level-3</div>	
+			    <div class="li-2-son">level-3</div>	
+			
+			 </div>
+
+			
+			 </div>
+		 
+		   
+		     	
+		</div>
+		
+		<div class="nav-li" >更换皮肤
+			
+			<div class="li-1">主题1
+			    	 <div class="li-2">
+			 <div class="li-2-son">图片1</div>
+			  <div class="li-2-son">图片2</div>			
+			   <div class="li-2-son">图片3</div>	
+			    <div class="li-2-son">图片4</div>	
+			
+			 </div>
+</div>
+		     
+		     <div class="li-1">主题2   	 <div class="li-2">
+			<div class="li-2-son">图片1</div>
+			  <div class="li-2-son">图片2</div>			
+			   <div class="li-2-son">图片3</div>	
+			    <div class="li-2-son">图片4</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">主题3
+		         	 <div class="li-2">
+			<div class="li-2-son">图片1</div>
+			  <div class="li-2-son">图片2</div>			
+			   <div class="li-2-son">图片3</div>	
+			    <div class="li-2-son">图片4</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">主题4
+		         	 <div class="li-2">
+			<div class="li-2-son"><a href="../images/1.jpg">图片1</a></div>
+			  <div class="li-2-son">图片2</div>			
+			   <div class="li-2-son">图片3</div>	
+			    <div class="li-2-son">图片4</div>	
+			
+			 </div>
+</div>
+
+		</div>
+        
+
+       
+
+
+
+
+        <div class="nav-li" >CSDN
+        	<div class="li-1">二级标题
+        	    	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		     
+
+		     <div class="li-1">二级标题
+		         	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">二级标题
+		         	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">二级标题
+		         	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+        </div>
+		
+
+		<div class="nav-li">GitHub
+		<div class="li-1">二级标题
+		    	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">二级标题
+		         	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">二级标题
+		         	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">二级标题
+		         	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		</div>
+
+		<div class="nav-li">W3C
+			<div class="li-1">二级标题
+			    	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">二级标题
+		         	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">二级标题
+		         	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		     <div class="li-1">二级标题
+		         	 <div class="li-2">
+			 <div class="li-2-son">三级标题</div>
+			  <div class="li-2-son">三级标题</div>			
+			   <div class="li-2-son">三级标题</div>	
+			    <div class="li-2-son">三级标题</div>	
+			
+			 </div>
+</div>
+		</div>
+	
+	</div>
+
+
+
+
+
+
+	<div class="gotop"><a href="#me">返回顶部</a></div>
+
+
+	<div class="one">
+		<div class="one-1">web demo 
+			 <div class="one-1-son">clock</div>
+			 <div class="one-1-son">counter</div>
+			 <div class="one-1-son">first index</div>
+			 <div class="one-1-son">calculater</div>
+			 	
+			 
+	      
+	    </div>
+		
+		<div class="one-1">software
+              <div class="one-1-son">ccleaner64</div>
+              <div class="one-1-son">mysql</div>
+              <div class="one-1-son">php</div>
+              <div class="one-1-son">phpmyadmin</div>
+              <div class="one-1-son">UltraISO</div>
+              	
+              
+		</div>
+		
+		<div class="one-1">download
+             <div class="one-1-son">picture</div>
+             <div class="one-1-son">video</div>
+             <div class="one-1-son">documentation</div>
+             <div class="one-1-son">music</div>
+		</div>
+		
+		<div class="one-1" >share
+             <div class="one-1-son">nasa</div>
+             <div class="one-1-son">apicloud</div>
+             <div class="one-1-son">linux</div>
+            
+
+		</div>
+	</div>
+
+
+	
+	<div class="me">
+		<div class="icon"></div>
+		<div class="words">
+			<p >HelloWorld!</p>
+			Hi,my name is GongXu,welcome to my personal website,i'm a front-end hobbyist,wish you enjoying.
+			i wish someday i can be a real programmer,not just a coder.
+		</div>
+	</div>
+
+	
+
+
+<div class="clock-zone">
+	<h1 class="hour" id="hour"></h1>
+	<h1 class="minute" id="minute"></h1>
+	<h1 class="second" id="second"></h1>
+
+</div>
+
+
+
+
+
+<!--使用按钮的onclic点击事件直接触发window.open('URL')的方法取代a标签超链接，好像不支持window.location.href="URL"-->
+<div class="login-zone">
+	<div class="login"><button onclick="window.open('login.html') ">login</button></div>  
+	
+	<div class="sign-up"><button onclick="window.open('http://www.baidu.com') ">SignUp</button></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="footer">
+	<h2 class="copyright">Copyright2018</h2>
+
+<div class="date-zone">
+
+	
+	<h1 class="year" id="year"></h1>
+	<h2 class="month" id="month"></h1>
+	<h3 class="day" id="day"></h1>
+</div>
+
+</div>
+
+
+
+
+
+
+</div>
+
+</body>
+</html>

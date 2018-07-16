@@ -1,0 +1,121 @@
+	<!DOCTYPE html>
+	<html>
+	<head>
+		<title>Calculator</title>
+		<meta charset="utf-8">
+		
+		<style type="text/css">
+		/*在添加网页背景图片的时候学会了引用图片、图片重复与否、图片位置、图片自适应整个页面等技巧，受益颇多*/
+		   
+		    body{background-image: url("star.jpg");background-position:center; width:"100%"; height:"100%";background-repeat:no-repeat;background-size:cover;}
+		         
+			#all{background-color:gray; width:500px; height:600px; margin-left: auto ;margin-right: auto;margin-top: 50px;border-radius:10px;box-shadow: }
+
+			
+			
+			#screen{width: 460px;height: 80px; background-color: lime; margin-top:10px;margin-left: 20px;float: left;border-radius:}
+			#scn{width: 460px;height: 80px;font-size: 40px;background:#009900;}
+
+			#keyboard{width:460px; height:460px;background-color: yellow;margin-left:20px;margin-top:30px;float: left;}
+			
+			#col1{width: 115px;height: 92px;background-color: red;float: left;}
+			#b1{width: 115px;height: 92px;font-size: 20px;}
+			#b2{width: 230px;height: 92px;font-size: 20px;}
+
+		
+			
+		</style>
+		
+		<script type="text/javascript">
+			var str;
+			var numresult;
+			function display(num)
+			{
+				str = document.getElementById('scn');
+                str.value = str.value + num;
+
+			}
+
+		
+
+			function result()
+			{
+				str=document.getElementById('scn');
+				numresult=eval(str.value);
+				str.value=numresult;
+			}
+			
+			function c()
+			{
+				str = document.getElementById('scn');
+                str.value = "" ;
+			}
+      
+
+      
+			
+            function sega()
+            {
+                	s=document.getElementById('all');
+                	if (s.style.background=="gray") 
+                		{s.style.background="#007ead";
+                         } 
+                	else {s.style.background="gray";}
+                }
+
+        /*
+            function SONY()
+            {
+              x=document.getElementById('b1');
+              if (x.style.background=="#silver") 
+              	{x.style.background =" #white";} 
+              else {x.style.background="silver";}
+
+            }
+        */    
+
+                	 
+
+               
+				
+		</script>
+	</head>
+	<body >
+		<div id="all">
+		<div id="screen"><input type="text" name="" id="scn"></div>
+		
+        <div id="keyboard">
+        	
+        	<div id="col1"><input type="button" name="" id="b1" value="C" onclick="c()"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="SEGA" onclick="sega()"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="SONY" onclick="SONY()"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="+" onclick="display('+')"></div>
+
+        	<div id="col1"><input type="button" name="" id="b1" value="7" onclick="display(7)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="8" onclick="display(8)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="9" onclick="display(9)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="-" onclick="display('-')"></div>
+
+        	<div id="col1"><input type="button" name="" id="b1" value="4" onclick="display(4)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="5" onclick="display(5)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="6" onclick="display(6)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="x" onclick="display('*')"></div>
+
+        	<div id="col1"><input type="button" name="" id="b1" value="1" onclick="display(1)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="2" onclick="display(2)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="3" onclick="display(3)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="/" onclick="display('/')"></div>
+
+        	<div id="col1"><input type="button" name="" id="b1" value="0" onclick="display(0)"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="." onclick="display(".")"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="DEL" onclick="del()"></div>
+        	<div id="col1"><input type="button" name="" id="b1" value="=" onclick="result()"></div>
+
+
+
+
+          </div>
+		</div>
+
+	</body>
+	</html>

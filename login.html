@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login</title>
+	<meta charset="utf-8">
+	<style type="text/css">
+	   
+	   .page{background-image: url('./images/glass.jpg');width: 1920px;height: 1080px; margin: 0 auto;position: relative;}
+		
+		.container{width: 700px;height:700px;background-color:rgba(0,0,240,0.4); position: absolute;left: 50%;top: 50%;margin-left: -350px;margin-top:-400px; border-radius: 14px;}
+		.container:hover{border-bottom: 5px solid white;}
+
+		
+
+       .logo-zone{width: 160px; height:160px; background-color:;  background-image: url("./images/logo.png"); margin: 0 auto;border-radius: 80px; margin-top: 14px;}
+
+		form{width: 600px; height: 500px; background-color:; margin: 0 auto;margin-top: 10px;}
+		 
+
+		  form table{width: 600px;height: 500px;background-color:rgba(0,10,0,0.1);color: white;text-align: center;font-size: 35px;margin: 0 auto;border-radius: 8px;}
+              table:hover{border:;}
+		   .submit{font-size: 30px;}
+		   .submit:hover{background-color: ;cursor: pointer;color: purple;}
+
+		   .text{width: 300px;height: 46px;font-size:  30px;}
+		   .text:hover{border: ;background-color: purple;color: white;}
+
+		
+
+	</style>
+	
+
+
+	<script type="text/javascript">
+		
+     //基本的表单本地验证
+		function login()
+		 { 
+		   	var a=document.getElementById('name');
+			var b=document.getElementById('password');
+			var c=document.getElementById("repassword");
+			 //var flag=confirm("are you sure you want to submit?")
+			 
+
+			if (a.value=="") 
+			 	{alert("用户名不能为空!")} 
+             
+               else if (a.value.length>7)
+		       {alert("用户名不能超过7个字符！")}
+		      
+		      else if (!isNaN(a.value))
+		       {alert("用户名不能为纯数字！")}
+		    
+		      
+
+		      else if (b.value=="") 
+			 	{alert("密码不能为空!")} 
+
+		      else if (b.value.length!==6)
+		        {alert("密码只能为6位！")}
+		      
+		      else if (c.value!=b.value)
+		      {alert("密码不一致！")}
+
+		    else{alert("验证成功！")}
+	
+	
+	
+}
+
+	</script>
+
+
+</head>
+ 
+
+
+<body>
+	
+	<div class="page">
+	
+	 	
+	
+		
+		<div class="container">
+			
+			<div class="logo-zone"></div>
+			
+		
+				<form>
+					<table>
+						<tr><td>用户名:</td> <td> <input type="text" name="name" class="text" id="name" value=""></td></tr>
+						<tr><td>密  码:</td> <td> <input type="password" name="password" class="text" id="password"></td></tr>
+						<tr><td>确认密码:</td> <td><input type="password" name="password" class="text" id="repassword"></td></tr>
+						<tr><td></td> <td><input type="submit" name="submit" value="submit" class="submit" onclick="login()"></td></tr>
+						
+					</table>
+					
+
+				</form>
+			
+			
+			
+		</div>
+		    
+    </div>
+
+    </div>
+
+
+
+</body>
+</html>
