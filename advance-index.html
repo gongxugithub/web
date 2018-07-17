@@ -5,7 +5,7 @@
 	<title>position</title>
 	<script type="text/javascript"></script>
 	<style type="text/css">
-	*{margin: 0；margin：0；}
+	*{margin: 0；padding：0；}
 	a{text-decoration: none;}
 	
 
@@ -120,18 +120,18 @@
              .login-zone button:hover{border: 2px solid black; }
 
 
-          
 
 
 
 
 
-          /*底部*/
+/*底部*/
           .footer{width: 1920px ;height:300px;background-color:rgba(25,25,112,0.9);float: left;font-size: 25px;color: white;text-align: center;position:;}
 
 
+
            /*年月日显示，主要是复习一下box-shadow和position的使用*/
-        .date-zone{width: 640px;height: 100px; background-color:; ;
+        .date-zone{width: 850px;height: 100px; background-color:;
         position: ;color: white;margin:50px auto; }
         
         .year{width:200px; height: 90px; background-color:rgba(100,0,0,0.3) ;font-size: 70px;text-align:center;
@@ -143,11 +143,24 @@
         .day{width:200px;height: 90px;background-color:rgba(0,0,100,0.3);margin:0; line-height: 90px;text-align: center;
         	 font-size: 60px; margin: 0 auto;margin-top: 5px;float: left;}
 
+         .week{width:200px;height: 90px;background-color:rgba(20,140,100,0.3);line-height: 90px;text-align: center; font-size: 40px;float: left;margin:5px 10px 5px 10px; }
+
 
 
           
 
-           
+          
+
+
+
+
+
+          
+
+
+
+        
+     
            
 
 
@@ -194,15 +207,21 @@
 
 
 
+		    //今天才发现有个bug存在，日期某日居然是2，但是已经17号了，才发现引用错误，显示二是因为引用成星期的方法了，所以它代表星期二
 
 
     function getcurrentDate() 
 	{
 		  var d=new Date();
 		  var year=d.getFullYear();
-		  var month=d.getMonth()+1;
+		  var month=d.getMonth()+1; //这里月份要加1是因为索引从0开始，这是计算机通用的
+		  var date=d.getDate();
 		  var day=d.getDay();
-		  
+
+//通过内置日期的函数获取对应日期，但是它为0-6，所以要用数组索引转换为对应的具体日期
+		  var week=["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday",];
+		  var weeknum=week[day];
+
 
 
 	     /*
@@ -218,7 +237,9 @@
 
          document.getElementById('year').innerHTML=year; 
          document.getElementById('month').innerHTML=month; 
-         document.getElementById('day').innerHTML=day; 
+         document.getElementById('day').innerHTML=date; 
+         document.getElementById('week').innerHTML=weeknum; 
+
           	}
          
 			
@@ -487,9 +508,7 @@
               <div class="one-1-son">ccleaner64</div>
               <div class="one-1-son">mysql</div>
               <div class="one-1-son">php</div>
-              <div class="one-1-son">phpmyadmin</div>
-              <div class="one-1-son">UltraISO</div>
-              	
+        
               
 		</div>
 		
@@ -497,7 +516,7 @@
              <div class="one-1-son">picture</div>
              <div class="one-1-son">video</div>
              <div class="one-1-son">documentation</div>
-             <div class="one-1-son">music</div>
+         
 		</div>
 		
 		<div class="one-1" >share
@@ -552,6 +571,9 @@
 
 
 
+
+
+
 </div>
 
 <div class="footer">
@@ -561,8 +583,10 @@
 
 	
 	<h1 class="year" id="year"></h1>
-	<h2 class="month" id="month"></h1>
-	<h3 class="day" id="day"></h1>
+	<h1 class="month" id="month"></h1>
+	<h1 class="day" id="day"></h1>
+	<h1 class="week" id="week"></h1>
+
 </div>
 
 </div>
