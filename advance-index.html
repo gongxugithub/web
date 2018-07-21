@@ -69,7 +69,7 @@
           .one-1:hover .one-1-son{display: block;}
 
           	      .one-1-son{width: 300px; height:50px; background-color:rgba(10,200,30,0.2); border-bottom: 1px solid white; display: none;font-size: 20px;}
-          	      .one-1-son:hover {font-size: 25px;cursor:pointer;}
+          	      .one-1-son:hover {font-size: 25px;cursor:pointer;background-color: #008CBA }
           	       /* .one-1-sons{width: 300px;height:50px;background-color:black;border-bottom: 1px solid white;} */
 
          
@@ -94,10 +94,39 @@
           
 
           /*时钟区*/
-          .clock-zone{width: 400px;height:80px;background-color: ;position: absolute;top: 360px;right: 50px;} 
-           
-           .clock-zone h1{margin-left: 20px;width: 100px;height:100px;background-color:blue;text-align: center;line-height: 100px;font-size: 70px;color: white;font-weight: ;float: left;border-radius: 50px;border: ;}
+          .clock-zone{width: 400px;height:80px;background-color: ;position: absolute;top: 360px;right: 50px;
+                      animation: updown 10s; -webkit-animation:updown 10s; } 
+         
+          @keyframes  updown
+           {
+           	0% {top:360px ;right:50px;}
+           	25% {top:300px ;right:50px ;}
+           	50% {top:420px ;right: 50px;}
+           	75% {top:300px ;right:50px ;}
+           	100% {top:360px ;right: 50px;}
+           }
 
+          -webkit-keyframes updown    /*用来兼容safari和chrome浏览器，keyframes不支持IE10及更低版本浏览器*/
+           {
+           	 0% {top:360px ;right:50px;}
+           	25% {top:300px ;right:50px ;}
+           	50% {top:420px ;right: 50px;}
+           	75% {top:300px ;right:50px ;}
+           	100% {top:360px ;right: 50px;}
+           }
+           
+           .clock-zone h1{margin-left: 20px;width: 100px;height:100px;background-color:blue;text-align: center;line-height: 100px;font-size: 70px;color: white;font-weight: ;float: left;border-radius: 50px;border: ;animation: roll 5s; transition:transform 2s; }
+            .clock-zone h1:hover{transform : rotate(360deg);}
+           @keyframes  roll
+           {
+           	0% {transform: rotate(0deg);}
+           	25% {transform: rotate(90deg);}
+           	50% {transform: rotate(180deg);}
+           	75% {transform: rotate(270deg);}
+           	100% {transform: rotate(360deg);}
+           }
+
+          
           
            .clock-zone .minute{background-color: purple;}
             .clock-zone .second{background-color: red;}
@@ -139,7 +168,22 @@
 
 
 /*底部*/
-          .footer{width: 1920px ;height:300px;background-color:rgba(25,25,112,0.9);float: left;font-size: 25px;color: white;text-align: center;position:;}
+          .footer{width: 1920px ;height:300px;background-color:rgba(25,25,112,0.9);float: left;font-size: 25px;color: white;text-align: center;position:;
+              animation: colorchange 10s;
+              -webkit-animation:colorchange 10s; /*safari and chrome*/
+          }
+
+          @keyframes colorchange
+          {
+          	from {background-color: rgba(25,25,112,0.6);}
+          	to {background-color: rgba(25,25,112,0.9);}
+          }
+
+          -webkit-keyframes colorchange
+          {
+          	from {background-color: rgba(25,25,112,0.3);}
+          	to {background-color: rgba(25,25,112,0.9);}
+          }
 
 
 
@@ -511,7 +555,6 @@
 			 <div class="one-1-son">clock</div>
 			 <div class="one-1-son">counter</div>
 			 <div class="one-1-son">first index</div>
-			 <div class="one-1-son">calculater</div>
 			 	
 			 
 	      
