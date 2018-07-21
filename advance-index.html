@@ -64,9 +64,11 @@
   /*主页导航区*/
           .one{width: 1216px;height: auto;background-color: gray;margin: auto;margin-top: 50px;font-size: 20px;}
 
+          
           .one-1{width: 300px;height: auto;background-color: rgba(20,30,240,0.4);border-right:; float: left;text-align: center;line-height:60px;margin-left: 4px;color: white;}
           .one-1:hover{background-color:;font-size: 30px;background-color: rgba(20,30,240,0.5);cursor:pointer;}
-          .one-1:hover .one-1-son{display: block;}
+          .one-1:hover .one-1-son{display: block;animation: slowdown 0.6s;}
+           @keyframes slowdown {from {height: 0px;} to{height: 50px}}  /*使用animation实现下拉菜单渐入，不至于太突兀*/
 
           	      .one-1-son{width: 300px; height:50px; background-color:rgba(10,200,30,0.2); border-bottom: 1px solid white; display: none;font-size: 20px;}
           	      .one-1-son:hover {font-size: 25px;cursor:pointer;background-color: #008CBA }
@@ -80,7 +82,8 @@
 
 
          /*使用绝对定位来固定个人展示区，精华的地方是学会使用宽的百分比50%和加上margin加上它本身宽的一半来水平居中定位*/
-        .me{width: 400px;height: 500px;background-color:rgba(0,0,240,0.4);position: absolute;left: 50%;top: 400px;margin-left: -200px;border-radius: 10px;}
+        .me{width: 400px;height: 500px;background-color:rgba(0,0,240,0.4);position: absolute;left: 50%;top: 400px;margin-left: -200px;border-radius: 10px; animation: move 2s;}
+        @keyframes move{from{left:200px} to{left:960px }} /*使用animation制造个人展示区的渐入效果*/
         .me :hover{}
           
 
