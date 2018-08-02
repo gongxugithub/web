@@ -7,8 +7,10 @@
 	   
 	   .page{background-image: url('./images/glass.jpg');width: 1920px;height: 1080px; margin: 0 auto;position: relative;}
 		
-		.container{width: 700px;height:700px;background-color:rgba(0,0,240,0.4); position: absolute;left: 50%;top: 50%;margin-left: -350px;margin-top:-400px; border-radius: 14px;}
-		.container:hover{border-bottom: 5px solid white;}
+		.container{width: 700px;height:700px;background-color:rgba(0,0,240,0.4); position: absolute;left: 50%;top: 50%;margin-left: -350px;margin-top:-400px; border-radius: 14px;box-shadow: 0px 5px 15px 10px white;}
+		
+
+	
 
 		
 
@@ -25,6 +27,13 @@
 		   .text{width: 300px;height: 46px;font-size:  30px;}
 		   .text:hover{border: ;background-color: purple;color: white;}
 
+
+		.prompt{position: absolute;top: 50%;margin-top: -400px; left: 69%;width: 400px;height: 700px;background-color:rgba(0,50,80,0.4);transition: width 1s;animation: L2R 2s;animation-delay: 0s;font-size: 25px;box-shadow: 0 5px 15px 10px white;color:white;}
+		.prompt span{font-size: 60px;font-weight: bold}
+		@keyframes L2R {from{width: 0px;}to{width: 400px;}}
+       
+         .prompt:hover{width: 500px;background-color:;}
+		 
 		
 
 	</style>
@@ -87,7 +96,7 @@
 			<div class="logo-zone"></div>
 			
 		
-				<form>
+				<form action="welcome.php" method="post">
 					<table>
 						<tr><td>用户名:</td> <td> <input type="text" name="name" class="text" id="name" value=""></td></tr>
 						<tr><td>密  码:</td> <td> <input type="password" name="password" class="text" id="password"></td></tr>
@@ -101,11 +110,39 @@
 			
 			
 			
-		</div>
+		    </div>
 		    
-    </div>
 
-    </div>
+
+
+
+		    <div class="prompt">
+		    	
+		    	<br>
+		    	<br>
+		    	<br>
+		    	<span>提示</span>
+		    	<br>
+		    	<br>
+		    	<br>
+            <strong> 用户名规则：</strong>不能为空，由7个及以下字母或者数字组成，不能为纯数字！<br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <br>
+             <strong>密码规则：</strong>不能为空，由6位字母或数字组成！
+		    </div> 
+       
+
+
+
+
+        </div>
+
+      
+
+ 
 
 
 
